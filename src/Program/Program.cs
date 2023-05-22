@@ -1,13 +1,18 @@
-﻿using System;
-using Library;
-using System.Collections.Generic;
-
+﻿using Library;
+using TwitterUCU;
+using WhatsAppApiUCU;
 namespace Program
 {
     class Program
     {
         static void Main(string[] args)
         {
+            var whatsApp = new WhatsAppApi();
+            whatsApp.Send("+59898111020", "Hey! I'm using WhatsApp");
+
+            var twitter = new TwitterMessage();
+            twitter.Tweet("Hola!");
+
             // Crear el contacto dueño
             Contact owner = new Contact("Yo", "099999999", "juanchisosa@gmail.com");
 
