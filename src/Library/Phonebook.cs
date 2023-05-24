@@ -57,8 +57,7 @@ namespace Library
             foreach (Contact contact in contacts)
             {
                 Console.WriteLine($"Sending message to {contact.Name}...");
-                // channel.Send(message, contact);
-                channel.SendMessage(message.Text, contact);
+                channel.Send(message, contact);
             }
         }
     }
