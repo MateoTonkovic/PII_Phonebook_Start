@@ -3,9 +3,9 @@ namespace Library
 {
     public class WhatsappChannel : IMessageChannel
     {
-        public void Send(Message message, Contact contact)
+        public void SendMessage(string message, Contact contact)
         {
-            Console.WriteLine($"Sending message to {message.To} via WhatsApp...");
+            Console.WriteLine($"Sending message to {contact.Name} : {message} via WhatsApp...");
         }
     }
 }

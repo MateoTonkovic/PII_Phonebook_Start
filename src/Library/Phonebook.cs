@@ -58,7 +58,7 @@ namespace Library
             {
                 Console.WriteLine($"Sending message to {contact.Name}...");
                 // channel.Send(message, contact);
-                channel.Send(message, contact);
+                channel.SendMessage(message.Text, contact);
             }
         }
     }

@@ -4,9 +4,9 @@ namespace Library
 {
     public class TwitterChannel : IMessageChannel
     {
-        public void Send(Message message, Contact contact)
+        public void SendMessage(string message, Contact contact)
         {
-            Console.WriteLine($"Sending message to {message.To} via Twitter...");
+            Console.WriteLine($"Sending message to {contact.Name}: {message} via Twitter...");
         }
     }
 }

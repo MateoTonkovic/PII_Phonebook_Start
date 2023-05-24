@@ -21,7 +21,7 @@ namespace Program
 
             // // Agregar contactos a la lista
             phonebook.Add(new Contact("Mamá", "099999999", "mama@gmail.com"));
-            phonebook.Add(new Contact("Papá", "099999999", "mama@gmail.com"));
+            phonebook.Add(new Contact("Papá", "099999999", "papa@gmail.com"));
 
             // Enviar un correo a algunos contactos
 
