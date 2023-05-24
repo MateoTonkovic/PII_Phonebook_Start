@@ -50,7 +50,13 @@ namespace Library
             this.persons.Remove(person);
         }
 
-        public void Send(string[] names, Message message, IMessageChannel channel)
+        public void SendToSingle(Contact recipient, Message message, IMessageChannel channel)
+        {
+            Console.WriteLine($"Sending message to {recipient.Name}...");
+            channel.Send(message, recipient);
+        }
+        
+        public void SendToMultiple(string[] names, Message message, IMessageChannel channel)
         {
             List<Contact> contacts = this.Search(names);
 
