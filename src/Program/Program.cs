@@ -33,11 +33,15 @@ namespace Program
             // Enviar un correo a algunos contactos
 
 
-            // Enviar un WhatsApp a algunos contactos
+            // Enviar un WhatsApp a un contacto
             Contact recipient = owner;
             Message message = new Message("Remitente", recipient.Phone, "Hola, este es un mensaje de prueba");
             IMessageChannel channel = new WhatsAppApiAdapter(whatsappApi);
-            phonebook.Send(recipient, message, channel);
+            phonebook.SendToSingle(recipient, message, channel);
+
+            //Enviar un WhatsApp a algunos contactos
+            string[] recipientNames = { "Mamá", "Papá" };
+            phonebook.SendToMultiple(recipientNames, message, channel);
 
 
             // Enviar un SMS a algunos contactos
